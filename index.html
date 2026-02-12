@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌊 QuantumFlux - Real-time Analytics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="logo">🌊</span>
+            <h1>QuantumFlux</h1>
+        </div>
+        <div class="nav-controls">
+            <button id="themeToggle" class="btn-icon" title="Toggle Theme">
+                <span class="theme-icon">🌙</span>
+            </button>
+            <button id="addWidget" class="btn-primary">+ Add Widget</button>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3>📊 Dashboards</h3>
+                <ul class="menu">
+                    <li class="menu-item active">Overview</li>
+                    <li class="menu-item">Analytics</li>
+                    <li class="menu-item">Real-time</li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <h3>📈 Data Streams</h3>
+                <div class="stream-status">
+                    <div class="stream-item">
+                        <span class="status-dot active"></span>
+                        <span>Stock Prices</span>
+                    </div>
+                    <div class="stream-item">
+                        <span class="status-dot active"></span>
+                        <span>Server Metrics</span>
+                    </div>
+                    <div class="stream-item">
+                        <span class="status-dot"></span>
+                        <span>User Activity</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-section">
+                <h3>⚙️ Settings</h3>
+                <ul class="menu">
+                    <li class="menu-item">Profile</li>
+                    <li class="menu-item">Preferences</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Dashboard Grid -->
+        <main class="dashboard">
+            <div class="dashboard-header">
+                <h2>Real-time Dashboard</h2>
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <span class="stat-label">Active Streams</span>
+                        <span class="stat-value" id="activeStreams">2</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Data Points</span>
+                        <span class="stat-value" id="dataPoints">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Widgets</span>
+                        <span class="stat-value" id="widgetCount">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid" id="widgetGrid">
+                <!-- Widgets will be dynamically added here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Widget Modal -->
+    <div id="widgetModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Widget</h3>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="widget-types">
+                    <div class="widget-type-card" data-type="line">
+                        <span class="widget-icon">📈</span>
+                        <h4>Line Chart</h4>
+                        <p>Real-time trends</p>
+                    </div>
+                    <div class="widget-type-card" data-type="bar">
+                        <span class="widget-icon">📊</span>
+                        <h4>Bar Chart</h4>
+                        <p>Compare values</p>
+                    </div>
+                    <div class="widget-type-card" data-type="pie">
+                        <span class="widget-icon">🥧</span>
+                        <h4>Pie Chart</h4>
+                        <p>Distribution</p>
+                    </div>
+                    <div class="widget-type-card" data-type="metric">
+                        <span class="widget-icon">🎯</span>
+                        <h4>Metric</h4>
+                        <p>Key numbers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
